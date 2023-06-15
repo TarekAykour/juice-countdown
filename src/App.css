@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./images/jupiter-europa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    /* animation: moving 2s infinite alternate; */
+    
   }
+  
+
+
+
+/* nav */
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navigation ul {
+    list-style: none;
+    
 }
 
-.App-link {
-  color: #61dafb;
+.navigation li {
+    display: inline-block;
+    padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Speedy';
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* home */
+
+.main {
+    margin: auto;
+    width: 50%;
+    margin-top: -25px;
+   
+}
+
+.main h1 {
+    font-size: 48px;
+    text-align: center;
+    font-family: spaceX;
+    position: relative;
+    z-index: 2;
+}
+
+.powered {
+ 
+    
+}
+
+.powered h2 {
+    font-size: 24px;
+    text-align: center;
+    font-family: speedy;
+    position: relative;
+    z-index: 2;
+}
+
+.orgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+    position: relative;
+    
+}
+
+.orgs img {
+    
+    max-width: 400px;
+    max-height: 300px;
+    position: relative;
+   
+}
+
+
+/* countdown */
+.countdown {
+    
+    width: 50%;
+    margin: auto;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 2;
+    
+}
+
+.countdown h2 {
+    font-family: speedy;
+}
+
+.left {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.left h2 {
+    font-family: spacex;
+    font-size: 52px;
+    margin: 25px;
+}
+.left h3 {
+    font-family: speedy;
+    font-size: 28px;
+    margin: 5px;
+}
+
+.expired {
+    border: solid 1px white;
+}
+
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+    margin-top: 25px;
+    
+}
+
+.about {
+    text-align: center;
+    font-family: speedy;
+    width: 50%;
+    margin: auto;
+}
+
+.about h2 {
+    font-family: speedy;
+}
+
+.about {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(3, 91, 255);
+    font-weight: 800;
+}
+
+
+
+@keyframes moving {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
