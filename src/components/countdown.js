@@ -9,7 +9,7 @@ function Countdown(){
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60  * 24));
     const years = diffDays / 365
     const months = (years % 1) * 12
-    const days =   (months % 1) * 30
+    const days =   (months % 1) * 30.33
     const hours = (days % 1) * 24
 
     
