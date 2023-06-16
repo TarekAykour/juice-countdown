@@ -6,12 +6,13 @@ function Countdown(){
     const arrivalDate = new Date('7/13/2031');
     const currentDate = new Date();
     const diffTime = arrivalDate - currentDate;
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    const years = Math.floor(diffDays / 365);
-    const months = Math.floor((diffDays % 365) / 30);
-    const days = diffDays % 30;
-    const hours = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60  * 24));
+    const years = diffDays / 365
+    const months = (years % 1) * 12
+    const days =   (months % 1) * 30
+    const hours = (days % 1) * 24
 
+    
     
     
     return(
@@ -50,18 +51,22 @@ function Countdown(){
                             <h3>{Math.round(years) > 1 ? 'years' : 'year'}</h3> 
                         </div>
 
-                        <div className="months">
+                        {months > 0 ?  <div className="months">
                             <h2>{ Math.round(months) }</h2> <br/>
                             <h3>{ Math.round(months) > 1 ? 'months' : 'month'} </h3>
-                        </div>
-                        <div className="days">
+                        </div> : <div/>}
+                        {days > 0 ? <div className="days">
                             <h2>{ Math.floor(days) }</h2> <br/>
                             <h3>{Math.round(days) > 1 ? 'days' : 'day'}</h3>
-                        </div>
+                        </div> : <div></div>}
+                        {
+                        hours > 0 ? 
                         <div className="hours">
                             <h2>{ Math.round(hours) } </h2><br/>
                             <h3>hours</h3>
                         </div>
+                        : <div></div>
+                        }
                     </div>
                 </div>
                 {/* <div className="countdown-expired">
