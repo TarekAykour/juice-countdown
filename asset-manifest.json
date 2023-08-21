@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/juice-countdown/static/css/main.179129c2.css",
-    "main.js": "/juice-countdown/static/js/main.44cac703.js",
-    "static/js/27.c45274df.chunk.js": "/juice-countdown/static/js/27.c45274df.chunk.js",
-    "static/media/juice.png": "/juice-countdown/static/media/juice.311bf978599c18c5e486.png",
-    "static/media/jupiter-europa.jpg": "/juice-countdown/static/media/jupiter-europa.88d76c378f6814420879.jpg",
-    "static/media/esa.png": "/juice-countdown/static/media/esa.a14707730fa224a7e1f0.png",
-    "static/media/logo.svg": "/juice-countdown/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/juice-countdown/index.html"
+    "main.css": "/TarekAykour/juice-countdown/static/css/main.723c97b4.css",
+    "main.js": "/TarekAykour/juice-countdown/static/js/main.56ea2dd3.js",
+    "static/js/27.c45274df.chunk.js": "/TarekAykour/juice-countdown/static/js/27.c45274df.chunk.js",
+    "static/media/juice.png": "/TarekAykour/juice-countdown/static/media/juice.311bf978599c18c5e486.png",
+    "static/media/jupiter-europa.jpg": "/TarekAykour/juice-countdown/static/media/jupiter-europa.88d76c378f6814420879.jpg",
+    "static/media/esa.png": "/TarekAykour/juice-countdown/static/media/esa.a14707730fa224a7e1f0.png",
+    "static/media/logo.svg": "/TarekAykour/juice-countdown/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/TarekAykour/juice-countdown/index.html"
   },
   "entrypoints": [
-    "static/css/main.179129c2.css",
-    "static/js/main.44cac703.js"
+    "static/css/main.723c97b4.css",
+    "static/js/main.56ea2dd3.js"
   ]
 }
