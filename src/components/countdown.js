@@ -3,14 +3,31 @@ import React, {useEffect, useState} from "react";
 
 
 function Countdown(){
-    const arrivalDate = new Date('7/13/2031');
-    const currentDate = new Date();
-    const diffTime = arrivalDate - currentDate;
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60  * 24));
-    const years = diffDays / 365
-    const months = (years % 1) * 12
-    const days =   (months % 1) * 30.33
-    const hours = (days % 1) * 24
+    // const arrivalDate = new Date('7/13/2031');
+    // const currentDate = new Date();
+    // const diffTime = arrivalDate - currentDate;
+    // const diffDays = Math.ceil(diffTime / (1000 * 60 * 60  * 24));
+    // const years = diffDays / 365
+    // const months = (years % 1) * 12
+    // const days =   (months % 1) * 30.33
+    // const hours = (days % 1) * 24
+
+const arrivalDate = new Date('7/13/2031');
+const currentDate = new Date();
+const timeDifference = arrivalDate - currentDate;
+
+// Calculate days remaining
+const millisecondsInADay = 1000 * 60 * 60 * 24;
+const daysRemaining = Math.ceil(timeDifference / millisecondsInADay);
+
+// Calculate years, months, and days
+const yearsRemaining = Math.floor(daysRemaining / 365);
+const daysWithoutYears = daysRemaining - (yearsRemaining * 365);
+const monthsRemaining = Math.floor(daysWithoutYears / 30); // Approximate
+const daysWithoutMonths = daysWithoutYears - (monthsRemaining * 30);
+
+// Calculate hours
+const hoursRemaining = Math.floor((timeDifference % millisecondsInADay) / (1000 * 60 * 60));
 
     
     
@@ -47,22 +64,22 @@ function Countdown(){
                     <h2 style={{textAlign: 'center'}}>Amount of time left</h2>
                     <div className="left">
                         <div className=" years">
-                            <h2>{Math.round(years)}</h2><br/>
-                            <h3>{Math.round(years) > 1 ? 'years' : 'year'}</h3> 
+                            <h2>{Math.round(yearsRemaining)}</h2><br/>
+                            <h3>{Math.round(yearsRemaining) > 1 ? 'years' : 'year'}</h3> 
                         </div>
 
-                        {months > 0 ?  <div className="months">
-                            <h2>{ Math.round(months) }</h2> <br/>
-                            <h3>{ Math.round(months) > 1 ? 'months' : 'month'} </h3>
+                        {monthsRemaining > 0 ?  <div className="months">
+                            <h2>{ Math.round(monthsRemaining) }</h2> <br/>
+                            <h3>{ Math.round(monthsRemaining) > 1 ? 'months' : 'month'} </h3>
                         </div> : <div/>}
-                        {days > 0 ? <div className="days">
-                            <h2>{ Math.floor(days) }</h2> <br/>
-                            <h3>{Math.round(days) > 1 ? 'days' : 'day'}</h3>
+                        {daysRemaining > 0 ? <div className="days">
+                            <h2>{ Math.floor(daysWithoutMonths) }</h2> <br/>
+                            <h3>{Math.round(daysWithoutMonths) > 1 ? 'days' : 'day'}</h3>
                         </div> : <div></div>}
                         {
-                        hours > 0 ? 
+                        hoursRemaining > 0 ? 
                         <div className="hours">
-                            <h2>{ Math.round(hours) } </h2><br/>
+                            <h2>{ Math.round(hoursRemaining) } </h2><br/>
                             <h3>hours</h3>
                         </div>
                         : <div></div>
